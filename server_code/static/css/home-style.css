@@ -1,0 +1,66 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+body{
+/*background-color: #000;*/
+}
+
+/* entypo */
+[class*="entypo-"]:before {
+   font-family: "entypo", sans-serif;
+}
+a {
+   text-decoration: none;
+}
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+.container {
+   margin: 0 auto;
+   padding: 20px 50px;
+   /*background: rgb(0, 0, 0);*/
+}
+#sticky-social {
+   left: 0;
+   position: fixed;
+   top: 200px;
+}
+#sticky-social a {
+   background: #333;
+   color: #fff;
+   display: block;
+   height: 35px;
+   font: 16px "Open Sans", sans-serif;
+   line-height: 35px;
+   position: relative;
+   text-align: center;
+   width: 50px;
+}
+#sticky-social a span {
+   line-height: 35px;
+   left: -120px;
+   position: absolute;
+   text-align:center;
+   width:120px;
+}
+#sticky-social a:hover span {
+   left: 100%;
+}
+#sticky-social a[class*="light-up"],
+#sticky-social a[class*="light-up"]:hover,
+#sticky-social a[class*="light-up"] span { background: #3b5998; }
+
+#sticky-social a[class*="logo-db"],
+#sticky-social a[class*="logo-db"]:hover,
+#sticky-social a[class*="logo-db"] span { background: #00aced; }
+
+#sticky-social a[class*="monitor"],
+#sticky-social a[class*="monitor"]:hover,
+#sticky-social a[class*="monitor"] span { background: #dd4b39; }
+
+.homeframe{
+margin-top:100px;
+}
+
+

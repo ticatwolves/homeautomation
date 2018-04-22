@@ -1,0 +1,10 @@
+.error{padding-top:100px;padding-bottom:100px;
+background-image: url("static/img/intro-carousel/1.jpg");
+    background-repeat: no-repeat, repeat;
+    background-color: #000;
+}
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }
+
+*{border-radius:0px!important; -moz-border-radius:0px!important; -webkit-border-radius:0px!important; -o-border-radius:0px!important}

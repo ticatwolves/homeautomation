@@ -1,0 +1,66 @@
+{% extends 'theme/home.html' %}
+{% block content %}
+
+{% for da in data %}
+{% if da %}
+<div class="row">
+  <div class="col-md-4">
+    <h2 class="h2">{{ da['name'] }}</h2>
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-primary custom-btn">Delete</button>
+  </div>
+  <div class="col-md-4">
+    {% if da['status'] == 0 %}
+      <input id="switch" class="toggleinput switch" value="0" type="checkbox" data-toggle="toggle" data-width="100%">
+    {% else %}
+      <input id="switch" class="toggleinput switch" value="1" type="checkbox" checked data-toggle="toggle" data-width="100%">
+    {% endif %}  
+  </div>
+</div>
+{% else %}
+<div class="row" style="display: none;">
+  <div class="col-md-4">
+    <h2 class="h2">{{ da['name'] }}</h2>
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-primary custom-btn">Delete</button>
+  </div>
+  <div class="col-md-4">
+    {% if da['status'] == 0 %}
+      <input id="switch" class="toggleinput switch" value="0" type="checkbox" data-toggle="toggle" data-width="100%">
+    {% else %}
+      <input id="switch" class="toggleinput switch" value="1" type="checkbox" checked data-toggle="toggle" data-width="100%">
+    {% endif %}  
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+<div class="modal fade" id="addDevice">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Add Device</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control input-lg" id="device_name" placeholder="Enter Appliance name" />
+                <br />
+                <input class="form-control input-lg" id="device_pin" type="text" placeholder="Enter Appliance Pin Number" />
+              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" id="add_device">Add</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a data-toggle="modal" data-target="#addDevice" class="back-to-top" style="display: block;"><i class="fa fa-chevron-arrow"></i></a>
+      <script src="{{ url_for('static', filename='js/appliances.js') }}"></script>
+      <link href="{{ url_for('static',filename='css/appliances.css') }}" rel="stylesheet">
+
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+
+{% endblock %}

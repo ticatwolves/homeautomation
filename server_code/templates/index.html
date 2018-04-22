@@ -1,0 +1,58 @@
+{% include 'layout/header.html' %}
+<section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active">
+            <div class="carousel-background"><img src="{{ url_for('static',filename='img/bg.jpg') }}" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>We provide best home automation</h2>
+                <p>Automate your home using brainos. We provide a android app as well as a web portal to control your home from anywhere in the world.</p>
+                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="{{ url_for('static',filename='img/bg2.jpg') }}" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>Live View</h2>
+                <p>We are providing 24x7 hours live view of your home in our portal to make your home secure.</p>
+                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="{{ url_for('static',filename='img/intro-carousel/3.jpg') }}" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>User handling</h2>
+                <p>Brainos is very user friendly.</p>
+                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- #intro -->
+  {% include 'layout/footer.html' %}

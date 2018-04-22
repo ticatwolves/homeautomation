@@ -1,0 +1,30 @@
+{% include 'layout/header.html' %}
+<div class="container login-container">
+    <center>
+	<h4 class="signup-title">
+		Register
+	</h4>
+        <div class="col-lg-4 col-lg-offset-4">
+	{% from "form/_formhelpers.html" import render_field %}
+	<form id="register-form" action="{{ url_for('signup') }}" method="POST" role="form">
+        <dl>
+            {{ render_field(form.name,"Enter you name") }}
+            {{ render_field(form.email,"Enter you email") }}
+            {{ render_field(form.password,"Enter password") }}
+            {{ render_field(form.confirm,"Confirm Password") }}
+        </dl>
+        <p>
+        <div class="col-md-6 col-md-offset-3">
+        <input type="submit" name="register-submit" class="form-control btn btn-register" value="Sign up">
+        </div>
+        </p>
+	</form>
+        </div>
+    {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}</p>
+    {% endif %}
+    </center>
+</div>
+    <link href="{{ url_for('static',filename='css/login-style.css') }}" rel="stylesheet">
+
+{% include 'layout/footer.html' %}

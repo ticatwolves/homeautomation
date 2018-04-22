@@ -1,0 +1,31 @@
+{% include 'layout/header.html' %}
+
+<div class="container login-container">
+    <center>
+	<h4 class="signup-title">
+		Contact us
+    </h4>
+    <div class="col-lg-4 col-lg-offset-4">
+	{% from "form/_contactform.html" import render_field %}
+	<form id="register-form" action="{{ url_for('contact') }}" method="POST" role="form">
+        <dl>
+            {{ render_field(form.name,"Enter you name") }}
+            {{ render_field(form.email,"Enter you email") }}
+            {{ render_field(form.message,"Enter your message") }}
+        </dl>
+        <p>
+        <div class="col-sm-6 col-sm-offset-3">
+        <input type="submit" tabindex="4" class="form-control btn btn-primary" value="Contact Us">
+        </div>
+        </p>
+    </form>
+    </div>
+    {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}</p>
+    {% endif %}
+    </center>
+</div>
+    <link href="{{ url_for('static',filename='css/login-style.css') }}" rel="stylesheet">
+
+{% include 'layout/footer.html' %}
+
